@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARISis | Dana's 40th Birthday • 2026</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans, Dancing Script (Handwriting for 'is') & Rubik (Hebrew) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           PARISIAN NAVY, CREAM & BLUSH PINK DESIGN SYSTEM
+           ========================================================= */
+        :root {
+            --navy: #14213D;
+            --navy-light: #1F325C;
+            --navy-soft: #EDF1F8;
+            --cream: #FAF7F2;
+            --cream-dark: #F1ECE3;
+            --white: #FFFFFF;
+            --blush: #E8A5B3;
+            --blush-bg: #F6DCE2;
+            --blush-text: #9E475B;
+            --text-main: #182032;
+            --text-muted: #5C6578;
+            --border-color: #E5DFD5;
+            --shadow-soft: 0 8px 28px rgba(20, 33, 61, 0.06);
+            --shadow-card: 0 4px 16px rgba(20, 33, 61, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--cream);
+            color: var(--text-main);
+            font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.55;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .font-luxury {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: -0.01em;
+        }
+
+        /* =========================================================
+           HERO HEADER (DEEP PARISIAN NAVY + BLUSH ACCENTS)
+           ========================================================= */
+        header.hero-header {
+            background: linear-gradient(160deg, var(--navy) 0%, #0D162B 100%);
+            color: var(--cream);
+            padding: 32px 16px 28px;
+            text-align: center;
+            position: relative;
+            border-bottom: 3px solid var(--blush);
+        }
+
+        .hero-inner {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .bday-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(232, 165, 179, 0.16);
+            border: 1px solid rgba(232, 165, 179, 0.55);
+            color: var(--blush-bg);
+            padding: 5px 16px;
+            border-radius: 999px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            direction: ltr;
+            margin-bottom: 10px;
+        }
+
+        .brand-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(50px, 10vw, 76px);
+            font-weight: 800;
+            line-height: 1;
+            color: var(--white);
+            letter-spacing: -2px;
+            direction: ltr;
+            display: block;
+            margin: 4px auto;
+        }
+
+        .brand-logo span {
+            font-family: 'Dancing Script', cursive;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.18em;
+            color: var(--blush);
+            margin-left: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            color: rgba(250, 247, 242, 0.85);
+            margin-top: 8px;
+            font-weight: 400;
+        }
+
+        .hero-subtitle strong {
+            color: var(--blush);
+            font-weight: 600;
+        }
+
+        /* =========================================================
+           COUNTDOWN TIMER (STRICTLY LTR: DAYS -> HOURS -> MIN -> SEC)
+           ========================================================= */
+        .countdown-section {
+            margin-top: 20px;
+        }
+
+        .cd-caption {
+            font-size: 12px;
+            color: rgba(250, 247, 242, 0.72);
+            margin-bottom: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        .countdown-grid {
+            direction: ltr;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 390px;
+            margin: 0 auto;
+        }
+
+        .cd-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(232, 165, 179, 0.3);
+            border-radius: 16px;
+            padding: 10px 6px;
+            backdrop-filter: blur(6px);
+        }
+
+        .cd-value {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--white);
+        }
+
+        .cd-card:last-child .cd-value {
+            color: var(--white);
+        }
+
+        .cd-label {
+            font-size: 11px;
+            color: rgba(250, 247, 242, 0.8);
+            margin-top: 3px;
+            font-weight: 500;
+        }
+
+        /* =========================================================
+           STICKY 5-TAB NAVIGATION BAR
+           ========================================================= */
+        nav.tabs-nav {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background: rgba(250, 247, 242, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 12px;
+        }
+
+        .tabs-container {
+            max-width: 820px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+        }
+
+        .tab-btn {
+            appearance: none;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            color: var(--navy);
+            border-radius: 14px;
+            padding: 9px 4px;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            transition: all 0.2s ease;
+        }
+
+        @media (min-width: 640px) {
+            .tab-btn {
+                flex-direction: row;
+                gap: 6px;
+                font-size: 14px;
+                padding: 11px 12px;
+            }
+        }
+
+        .tab-btn:hover {
+            border-color: var(--blush);
+        }
+
+        .tab-btn.active {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+            box-shadow: 0 4px 12px rgba(20, 33, 61, 0.22);
+        }
+
+        /* =========================================================
+           MAIN CONTENT & STRICTLY EXCLUSIVE TAB PANELS
+           ========================================================= */
+        main {
+            max-width: 820px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 22px 16px 48px;
+            flex: 1;
+        }
+
+        .tab-panel {
+            display: none;
+            animation: panelFade 0.24s ease;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        @keyframes panelFade {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* =========================================================
+           REUSABLE CARDS, BADGES & BUTTONS
+           ========================================================= */
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 22px;
+            padding: 20px;
+            box-shadow: var(--shadow-card);
+            margin-bottom: 16px;
+        }
+
+        .card-navy {
+            background: var(--navy);
+            color: var(--cream);
+            border-color: var(--navy);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 11px;
+            border-radius: 999px;
+        }
+
+        .badge-blush {
+            background: var(--blush-bg);
+            color: var(--blush-text);
+            border: 1px solid rgba(232, 165, 179, 0.6);
+        }
+
+        .badge-navy {
+            background: var(--navy-soft);
+            color: var(--navy);
+            border: 1px solid rgba(20, 33, 61, 0.15);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 16px;
+            border-radius: 13px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .btn-navy {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .btn-navy:hover {
+            background: var(--navy-light);
+        }
+
+        .btn-blush {
+            background: var(--blush);
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .btn-blush:hover {
+            background: #DF93A3;
+        }
+
+        .btn-outline {
+            background: var(--cream);
+            color: var(--navy);
+            border-color: var(--border-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--cream-dark);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        @media (min-width: 680px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* =========================================================
+           TAB 1: SCHEDULE (HIGHLIGHTS ONLY)
+           ========================================================= */
+        .day-filter-bar {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            margin-bottom: 16px;
+            scrollbar-width: none;
+        }
+
+        .day-filter-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .day-pill {
+            appearance: none;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            color: var(--navy);
+            padding: 7px 15px;
+            border-radius: 999px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .day-pill.active {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .day-section {
+            margin-bottom: 28px;
+        }
+
+        .day-heading {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+
+        .day-he-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .timeline {
+            border-right: 2px solid var(--blush);
+            padding-right: 18px;
+            margin-right: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .event-item {
+            position: relative;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 16px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .event-item.booked {
+            border-color: rgba(232, 165, 179, 0.85);
+            background: linear-gradient(180deg, #FFFFFF 0%, #FFF9FA 100%);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            right: -25px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--navy);
+            border: 2px solid var(--cream);
+        }
+
+        .event-item.booked .timeline-dot {
+            background: var(--blush);
+            box-shadow: 0 0 0 3px rgba(232, 165, 179, 0.35);
+        }
+
+        .event-top {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .event-time {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            background: var(--navy-soft);
+            color: var(--navy);
+            padding: 3px 10px;
+            border-radius: 9px;
+        }
+
+        .event-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 3px;
+        }
+
+        .event-addr {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            direction: ltr;
+            text-align: right;
+            margin-bottom: 6px;
+        }
+
+        .event-desc {
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .event-alert {
+            margin-top: 10px;
+            background: var(--blush-bg);
+            border-right: 3px solid var(--blush-text);
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .booking-pill {
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--navy-soft);
+            border: 1px solid rgba(20, 33, 61, 0.15);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--navy);
+        }
+
+        /* =========================================================
+           TAB 2: FLIGHTS & APARTMENT + TAXI MODAL
+           ========================================================= */
+        .apt-address-hero {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 21px;
+            font-weight: 700;
+            direction: ltr;
+            text-align: right;
+            margin: 12px 0 18px;
+            line-height: 1.35;
+            color: var(--white);
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .btn-group .btn {
+            flex: 1 1 auto;
+        }
+
+        .flight-code {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--navy);
+            direction: ltr;
+            text-align: right;
+            margin: 8px 0 4px;
+        }
+
+        .flight-schedule-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--cream);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 12px;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        .flight-schedule-box > div:first-child {
+            border-left: 1px solid var(--border-color);
+        }
+
+        .flight-hour {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--navy);
+            display: block;
+        }
+
+        /* Fullscreen Taxi Modal (Strict: ONLY English/French address + G7 Link) */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(13, 22, 43, 0.94);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-backdrop.open {
+            display: flex;
+        }
+
+        .taxi-modal-box {
+            background: var(--cream);
+            border: 2px solid var(--blush);
+            border-radius: 28px;
+            max-width: 480px;
+            width: 100%;
+            padding: 34px 24px 26px;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            background: var(--white);
+            color: var(--navy);
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .taxi-address-display {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 26px 16px;
+            margin: 16px 0 22px;
+            direction: ltr;
+        }
+
+        .taxi-street {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.3;
+        }
+
+        .taxi-city {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--blush-text);
+            margin-top: 8px;
+        }
+
+        /* =========================================================
+           FLOATING BACK-TO-DAYS BUTTON (SCHEDULE TAB ONLY)
+           ========================================================= */
+        #scroll-to-days-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 20px;
+            z-index: 90;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--white);
+            border: 2px solid var(--blush);
+            box-shadow: 0 8px 22px rgba(20, 33, 61, 0.32);
+            font-size: 22px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(14px);
+            transition: all 0.25s ease;
+        }
+
+        #scroll-to-days-btn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scroll-to-days-btn:hover {
+            background: var(--navy-light);
+        }
+
+        .taxi-city {
+            font-family: 'Bodoni Moda', Georgia, serif;
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--blush-text);
+            margin-top: 8px;
+        }
+
+        /* =========================================================
+           TAB 3: WEATHER & STYLE
+           ========================================================= */
+        .weather-main-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 18px;
+            padding: 18px;
+            margin: 14px 0;
+        }
+
+        .weather-deg {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1;
+            color: var(--blush);
+        }
+
+        .forecast-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            text-align: center;
+        }
+
+        .forecast-cell {
+            background: var(--cream);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 10px 6px;
+            font-size: 12px;
+        }
+
+        .style-tip {
+            background: var(--cream);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 14px;
+            margin-bottom: 10px;
+        }
+
+        .style-tip h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .style-tip p {
+            font-size: 13px;
+            color: var(--text-main);
+        }
+
+        /* =========================================================
+           TAB 4: EXPENSE SPLITTER (€)
+           ========================================================= */
+        .input-ctrl {
+            width: 100%;
+            background: var(--cream);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 10px 12px;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--navy);
+        }
+
+        .input-ctrl:focus {
+            outline: none;
+            border-color: var(--blush);
+        }
+
+        .sisters-names-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .sisters-names-grid .input-ctrl {
+            text-align: center;
+            font-weight: 600;
+            background: var(--white);
+        }
+
+        .expense-add-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        @media (min-width: 640px) {
+            .expense-add-grid {
+                grid-template-columns: 2fr 1fr 1.2fr auto;
+            }
+        }
+
+        .settlement-card {
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 18px;
+            padding: 18px;
+            margin-top: 16px;
+        }
+
+        .settlement-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+
+        .transfer-pill {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(232, 165, 179, 0.35);
+            border-radius: 12px;
+            padding: 9px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        .expense-item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--cream);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-top: 8px;
+        }
+
+        .delete-exp-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 16px;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        .delete-exp-btn:hover {
+            color: var(--blush-text);
+        }
+
+        /* =========================================================
+           TOAST & FOOTER
+           ========================================================= */
+        #toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: var(--navy);
+            color: var(--white);
+            border: 1px solid var(--blush);
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            box-shadow: 0 8px 24px rgba(20, 33, 61, 0.25);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.25s ease;
+            z-index: 200;
+            white-space: nowrap;
+        }
+
+        #toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        footer {
+            text-align: center;
+            padding: 26px 16px;
+            border-top: 1px solid var(--border-color);
+            background: var(--white);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toast Notification -->
+    <div id="toast">הועתק בהצלחה</div>
+
+    <!-- Floating Back-to-Days Button (Visible when scrolling down on Schedule Tab) -->
+    <button id="scroll-to-days-btn" onclick="scrollToDaysTabs()" aria-label="חזרה לטאבים של הימים" title="חזרה לימים">↑</button>
+
+    <!-- Fullscreen Taxi Driver Modal (Address Only + G7 App Link) -->
+    <div id="taxi-modal" class="modal-backdrop" onclick="closeTaxiModal()">
+        <div class="taxi-modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close-btn" onclick="closeTaxiModal()" aria-label="Close">✕</button>
+            <div class="font-luxury" style="font-style: italic; color: var(--blush-text); font-size: 20px;" dir="ltr">Adresse • Destination</div>
+            <div class="taxi-address-display">
+                <div class="taxi-street">7 Rue des Fontaines du Temple, 3rd arr.</div>
+                <div class="taxi-city">75003 Paris, France</div>
+            </div>
+            <a href="https://www.g7.fr/en/" target="_blank" rel="noopener noreferrer" class="btn btn-navy" style="width: 100%; padding: 13px;">
+                🚕 פתיחת אפליקציית מוניות G7
+            </a>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         HEADER & COUNTDOWN
+         ========================================================= -->
+    <header class="hero-header">
+        <div class="hero-inner">
+            <div class="bday-pill">✨ DANA’S 40TH BIRTHDAY ✨</div>
+            <h1 class="brand-logo">PARIS<span>is</span></h1>
+            <p class="hero-subtitle">
+                <strong>25–29 בנובמבר 2026</strong> • סופ״ש אחיות בפריז
+            </p>
+
+            <!-- Countdown Timer (Strictly LTR: Days -> Hours -> Minutes -> Seconds) -->
+            <div class="countdown-section">
+                <div id="cd-caption" class="cd-caption">סופרות לאחור עד ההמראה לפריז (25.11 • 16:50)</div>
+                <div class="countdown-grid">
+                    <div class="cd-card">
+                        <div id="cd-days" class="cd-value">--</div>
+                        <div class="cd-label">ימים</div>
+                    </div>
+                    <div class="cd-card">
+                        <div id="cd-hours" class="cd-value">--</div>
+                        <div class="cd-label">שעות</div>
+                    </div>
+                    <div class="cd-card">
+                        <div id="cd-minutes" class="cd-value">--</div>
+                        <div class="cd-label">דקות</div>
+                    </div>
+                    <div class="cd-card">
+                        <div id="cd-seconds" class="cd-value">--</div>
+                        <div class="cd-label">שניות</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================
+         5-TAB NAVIGATION BAR
+         ========================================================= -->
+    <nav class="tabs-nav">
+        <div class="tabs-container">
+            <button class="tab-btn active" data-tab="schedule" onclick="switchTab('schedule')">
+                <span>📅</span>
+                <span>הלו״ז</span>
+            </button>
+            <button class="tab-btn" data-tab="flights" onclick="switchTab('flights')">
+                <span>✈️</span>
+                <span>טיסות ודירה</span>
+            </button>
+            <button class="tab-btn" data-tab="weather" onclick="switchTab('weather')">
+                <span>🌤️</span>
+                <span>מזג אוויר</span>
+            </button>
+            <button class="tab-btn" data-tab="expenses" onclick="switchTab('expenses')">
+                <span>💶</span>
+                <span>התחשבנות €</span>
+            </button>
+            <button class="tab-btn" data-tab="media" onclick="switchTab('media')">
+                <span>📸</span>
+                <span>תמונות ומפה</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- =========================================================
+         MAIN CONTENT (STRICTLY ONE TAB PANEL VISIBLE AT A TIME)
+         ========================================================= -->
+    <main>
+
+        <!-- TAB 1: SCHEDULE -->
+        <section id="panel-schedule" class="tab-panel active">
+            <div class="day-filter-bar" id="day-filter-bar">
+                <button class="day-pill active" data-day="all" onclick="filterDay('all')">הכל</button>
+                <button class="day-pill" data-day="wed" onclick="filterDay('wed')">רביעי 25.11</button>
+                <button class="day-pill" data-day="thu" onclick="filterDay('thu')">חמישי 26.11</button>
+                <button class="day-pill" data-day="fri" onclick="filterDay('fri')">שישי 27.11</button>
+                <button class="day-pill" data-day="sat" onclick="filterDay('sat')">שבת 28.11</button>
+                <button class="day-pill" data-day="sun" onclick="filterDay('sun')">ראשון 29.11</button>
+            </div>
+            <div id="itinerary-container"></div>
+        </section>
+
+        <!-- TAB 2: FLIGHTS & STAY -->
+        <section id="panel-flights" class="tab-panel">
+            <!-- Apartment Card -->
+            <div class="card card-navy">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="badge badge-blush">🔑 הדירה שלנו במארה</span>
+                    <span style="font-size: 12px; color: rgba(250, 247, 242, 0.7);">3rd arr., Le Marais</span>
+                </div>
+                <div class="apt-address-hero">7 Rue des Fontaines du Temple, 3rd arr., 75003 Paris, France</div>
+                <div class="btn-group">
+                    <a href="https://www.google.com/maps/search/?api=1&query=7+Rue+des+Fontaines+du+Temple,+3rd+arr.,+75003+Paris,+France" target="_blank" rel="noopener noreferrer" class="btn btn-blush">
+                        📍 ניווט במפות
+                    </a>
+                    <button class="btn btn-outline" onclick="openTaxiModal()">
+                        🚕 כרטיס לנהג מונית
+                    </button>
+                    <a href="https://www.g7.fr/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        📲 אפליקציית מוניות G7
+                    </a>
+                </div>
+            </div>
+
+            <!-- Booking Code Banner -->
+            <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div>
+                    <div style="font-size: 12px; color: var(--text-muted);">קוד הזמנה משותף • EL AL</div>
+                    <div class="font-luxury" style="font-size: 24px; font-weight: 700; color: var(--navy);" dir="ltr">Z63NZ7</div>
+                </div>
+                <button class="btn btn-navy" onclick="copyText('Z63NZ7', 'קוד הזמנה Z63NZ7 הועתק!')">
+                    📋 העתקת קוד הזמנה
+                </button>
+            </div>
+
+            <!-- Outbound & Return Flights -->
+            <div class="grid-2">
+                <div class="card">
+                    <span class="badge badge-blush">🛫 טיסת הלוך</span>
+                    <div class="flight-code">LY325 • TLV ➔ CDG</div>
+                    <div style="font-size: 13px; color: var(--text-muted);">רביעי, 25 בנובמבר 2026</div>
+                    <div class="flight-schedule-box">
+                        <div>
+                            <span style="font-size: 11px; color: var(--text-muted);">המראה מת״א</span>
+                            <span class="flight-hour">16:50</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 11px; color: var(--text-muted);">נחיתה בפריז (05h:10m)</span>
+                            <span class="flight-hour" style="color: var(--blush-text);">21:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="badge badge-navy">🛬 טיסת חזור</span>
+                    <div class="flight-code">LY320 • CDG ➔ TLV</div>
+                    <div style="font-size: 13px; color: var(--text-muted);">ראשון, 29 בנובמבר 2026</div>
+                    <div class="flight-schedule-box">
+                        <div>
+                            <span style="font-size: 11px; color: var(--text-muted);">המראה מפריז</span>
+                            <span class="flight-hour">11:00</span>
+                        </div>
+                        <div>
+                            <span style="font-size: 11px; color: var(--text-muted);">נחיתה בת״א (04h:30m)</span>
+                            <span class="flight-hour" style="color: var(--blush-text);">16:30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: WEATHER & STYLE -->
+        <section id="panel-weather" class="tab-panel">
+            <div class="grid-2">
+                <!-- Weather Card -->
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span class="badge badge-blush">🌤️ מזג אוויר בפריז</span>
+                        <span style="font-size: 12px; color: var(--text-muted);" dir="ltr">Paris, France</span>
+                    </div>
+                    <div class="weather-main-box">
+                        <div>
+                            <div id="w-temp" class="weather-deg">9°</div>
+                            <div id="w-desc" style="font-size: 14px; margin-top: 4px; color: rgba(250,247,242,0.9);">קריר ופריזאי</div>
+                        </div>
+                        <div id="w-emoji" style="font-size: 42px;">⛅</div>
+                    </div>
+                    <div style="font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 8px;">תחזית לימים הקרובים:</div>
+                    <div id="w-forecast" class="forecast-row">
+                        <div class="forecast-cell"><strong>היום</strong><div dir="ltr" style="margin-top: 4px;">8° / 11°</div></div>
+                        <div class="forecast-cell"><strong>מחר</strong><div dir="ltr" style="margin-top: 4px;">7° / 10°</div></div>
+                        <div class="forecast-cell"><strong>מחרתיים</strong><div dir="ltr" style="margin-top: 4px;">8° / 11°</div></div>
+                    </div>
+                </div>
+
+                <!-- Packing & Style Guide -->
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                        <span class="badge badge-navy">🧥 מדריך סטייל ואריזה לנובמבר</span>
+                        <span style="font-size: 12px; color: var(--blush-text); font-weight: 600;">8°–11°</span>
+                    </div>
+                    <div class="style-tip">
+                        <h4>🧶 שיטת השכבות (Layering)</h4>
+                        <p>סריג קשמיר או גולף דק מתחת למעיל צמר ארוך או טרנץ׳ מחמם — בחוץ קריר, אבל בתוך המסעדות והחנויות נעים ומחומם.</p>
+                    </div>
+                    <div class="style-tip">
+                        <h4>👢 נעליים נוחות להליכה</h4>
+                        <p>מגפונים שטוחים שיקיים או סניקרס נוחות שכבר ננעלו בעבר — סוף נובמבר מושלם לשיטוטים ארוכים במארה ובמונמארטר.</p>
+                    </div>
+                    <div class="style-tip">
+                        <h4>🍸 לוקים חגיגיים לערב (L’Avenue & Miss Kō)</h4>
+                        <p>שיק פריזאי לכבוד יום ההולדת של דנה: שמלה סרוגה מחמיאה או בלייזר מחויט מעל ג׳ינס כהה ומגפיים.</p>
+                    </div>
+                    <div class="style-tip" style="margin-bottom: 0;">
+                        <h4>☂️ מטרייה קומפקטית וצעיף</h4>
+                        <p>צעיף גדול ומפנק ומטרייה מתקפלת קטנה בתיק היומי למקרה של טפטוף פריזאי רומנטי.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: EXPENSE SPLITTER (€) -->
+        <section id="panel-expenses" class="tab-panel">
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <span class="badge badge-blush">💶 התחשבנות ביורו</span>
+                        <h2 style="font-size: 20px; font-weight: 700; color: var(--navy); margin-top: 6px;">חלוקת הוצאות משותפות</h2>
+                    </div>
+                    <button class="btn btn-outline" onclick="copyExpenseSummary()">📲 העתק סיכום לוואטסאפ</button>
+                </div>
+
+                <!-- Editable Sisters Names -->
+                <div style="margin-top: 14px; background: var(--cream); padding: 12px; border-radius: 14px; border: 1px solid var(--border-color);">
+                    <div style="font-size: 12px; font-weight: 600; color: var(--navy);">שמות המשתתפות (ניתן לערוך בלחיצה):</div>
+                    <div class="sisters-names-grid">
+                        <input id="sister-0" class="input-ctrl" type="text" onchange="updateSisterName(0, this.value)">
+                        <input id="sister-1" class="input-ctrl" type="text" onchange="updateSisterName(1, this.value)">
+                        <input id="sister-2" class="input-ctrl" type="text" onchange="updateSisterName(2, this.value)">
+                    </div>
+                </div>
+
+                <!-- Add Expense Form -->
+                <form class="expense-add-grid" onsubmit="addExpense(event)">
+                    <input id="exp-desc" class="input-ctrl" type="text" required placeholder="תיאור (למשל: מונית מ-CDG לדירה)">
+                    <input id="exp-amount" class="input-ctrl" type="number" step="0.01" min="0.1" required placeholder="סכום (€)" dir="ltr">
+                    <select id="exp-payer" class="input-ctrl"></select>
+                    <button type="submit" class="btn btn-navy">+ הוספה</button>
+                </form>
+
+                <!-- Summary & Settlement -->
+                <div class="settlement-card">
+                    <div class="settlement-header">
+                        <div>
+                            <div style="font-size: 11px; color: rgba(250, 247, 242, 0.7);">סה״כ הוצאות משותפות</div>
+                            <div id="exp-total" class="font-luxury" style="font-size: 26px; font-weight: 700;" dir="ltr">€0.00</div>
+                        </div>
+                        <div style="text-align: left;">
+                            <div style="font-size: 11px; color: rgba(250, 247, 242, 0.7);">חלק לכל אחת</div>
+                            <div id="exp-share" class="font-luxury" style="font-size: 24px; font-weight: 700; color: var(--blush);" dir="ltr">€0.00</div>
+                        </div>
+                    </div>
+                    <div style="font-size: 12px; font-weight: 600; color: var(--blush-bg);">מי מעבירה למי וכמה:</div>
+                    <div id="settlement-list"></div>
+                </div>
+
+                <!-- Recorded Expenses -->
+                <div style="margin-top: 16px;">
+                    <div style="font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px;">פירוט הוצאות:</div>
+                    <div id="expenses-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: SHARED PHOTOS & MAP -->
+        <section id="panel-media" class="tab-panel">
+            <div class="grid-2">
+                <!-- Shared Photos Card -->
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span class="badge badge-blush">📸 אלבום תמונות משותף</span>
+                        <span style="font-size: 11px; color: var(--blush-text); font-weight: 700;">איכות מקורית</span>
+                    </div>
+                    <h3 style="font-size: 19px; font-weight: 700; color: var(--navy); margin: 10px 0 6px;">כל התמונות באיכות מלאה</h3>
+                    <p style="font-size: 13px; color: var(--text-main); margin-bottom: 14px;">
+                        פתחו אלבום משותף ב-Google Photos או באייפון (iCloud Shared Album) והדביקו כאן את הקישור כדי שכולן ייכנסו ויעלו תמונות בלי כיווץ של וואטסאפ.
+                    </p>
+                    <div class="btn-group" style="margin-bottom: 14px;">
+                        <a href="https://photos.google.com/sharing" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Google Photos</a>
+                        <a href="https://www.icloud.com/photos/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">iCloud Photos</a>
+                    </div>
+                    <div id="album-storage-box"></div>
+                </div>
+
+                <!-- Shared Google Maps Card -->
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span class="badge badge-navy">🗺️ מפת המקומות שלנו</span>
+                        <span style="font-size: 11px; color: var(--navy); font-weight: 700;">צפייה ועריכה</span>
+                    </div>
+                    <h3 style="font-size: 19px; font-weight: 700; color: var(--navy); margin: 10px 0 6px;">המפה של PARISis ב-Google Maps</h3>
+                    <p style="font-size: 13px; color: var(--text-main); margin-bottom: 14px;">
+                        הדביקו כאן את קישור השיתוף של רשימת המקומות השמורים שלכן (מומלץ להגדיר הרשאת <strong>Can edit</strong> בגוגל מאפס כדי שכל אחות תוכל להוסיף עוד מקומות).
+                    </p>
+                    <div style="margin-bottom: 14px;">
+                        <a href="https://www.google.com/maps/@48.8588,2.3470,13z" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
+                            פתיחת Google Maps להעתקת הקישור
+                        </a>
+                    </div>
+                    <div id="map-storage-box"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <footer>
+        <div class="font-luxury" style="font-size: 24px; font-weight: 700; color: var(--navy);" dir="ltr">
+            PARIS<span style="font-style: italic; font-weight: 500; color: var(--blush-text);">is</span>
+        </div>
+        <div style="margin-top: 4px;">Dana’s 40th Birthday • סופ״ש אחיות בפריז • נובמבר 2026</div>
+    </footer>
+
+    <script>
+        /* =========================================================
+           1. SCHEDULE DATA (CLEAN HIGHLIGHTS ONLY, NO SUBTITLES)
+           ========================================================= */
+        const scheduleData = [
+            {
+                id: 'wed',
+                title: 'רביעי, 25 בנובמבר | הגעה לפריז',
+                events: [
+                    {
+                        time: '21:00',
+                        title: 'נחיתה בפריז (CDG) והגעה לדירה',
+                        address: '7 Rue des Fontaines du Temple, 75003 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=7+Rue+des+Fontaines+du+Temple+75003+Paris',
+                        booked: false,
+                        badge: 'הגעה',
+                        desc: 'התמקמות בדירה וסיבוב היכרות קליל בשכונה לפי הכוח.'
+                    }
+                ]
+            },
+            {
+                id: 'thu',
+                title: 'חמישי, 26 בנובמבר | בוקר במארה וערב בשאנז אליזה',
+                events: [
+                    {
+                        time: '10:30',
+                        title: 'סיבוב בוטיקים במארה',
+                        address: '33 Rue des Blancs Manteaux, 75004 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Sezane+33+Rue+des+Blancs+Manteaux+75004+Paris',
+                        booked: false,
+                        badge: 'שופינג ושיטוט',
+                        desc: 'התחלה ב-Sézane ושיטוט נינוח ברחובות המארה.'
+                    },
+                    {
+                        time: '13:00',
+                        title: 'הפסקת צהריים במארה',
+                        address: 'Le Marais, 75004 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Le+Marais+75004+Paris',
+                        booked: false,
+                        badge: 'צהריים',
+                        desc: 'עצירה קלילה לפי החשק (ללא הזמנה).'
+                    },
+                    {
+                        time: '16:30',
+                        title: 'מעבר לאזור שאנז אליזה / KITH',
+                        address: '49 Rue Pierre Charron, 75008 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=KITH+Paris+49+Rue+Pierre+Charron+75008+Paris',
+                        booked: false,
+                        badge: 'אחה״צ',
+                        desc: 'סיבוב באזור וזמן להתרעננות לפני ארוחת הערב.'
+                    },
+                    {
+                        time: '19:45',
+                        title: 'ארוחת ערב ב-Miss Kō',
+                        address: '49–51 Avenue George V, 75008 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Miss+Ko+49+Avenue+George+V+75008+Paris',
+                        booked: true,
+                        badge: 'מוזמן',
+                        desc: 'שולחן מוזמן לשלוש, בפנים.'
+                    }
+                ]
+            },
+            {
+                id: 'fri',
+                title: 'שישי, 27 בנובמבר | מונמארטר, מוזיאון וטווילרי',
+                events: [
+                    {
+                        time: '10:00',
+                        title: 'בראנץ׳ ב-MESA de HOY',
+                        address: '68 Rue des Martyrs, 75009 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=MESA+de+HOY+68+Rue+des+Martyrs+75009+Paris',
+                        booked: true,
+                        badge: 'מוזמן',
+                        desc: 'ארוחת בוקר לפני מונמארטר.'
+                    },
+                    {
+                        time: '11:30',
+                        title: 'סיבוב במונמארטר',
+                        address: 'Sacré-Cœur, Montmartre, Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Sacre+Coeur+Montmartre+Paris',
+                        booked: false,
+                        badge: 'שיטוט',
+                        desc: 'סקרה קר וסמטאות השכונה לפי הקצב שלכן.'
+                    },
+                    {
+                        time: '13:00',
+                        title: 'Musée de l’Orangerie',
+                        address: 'Jardin des Tuileries, Place de la Concorde, 75001 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Musee+de+l+Orangerie+Jardin+des+Tuileries+75001+Paris',
+                        booked: true,
+                        badge: 'מוזמן • מוזיאון',
+                        code: '35412393',
+                        desc: 'כניסה מהירה ל-3 אורחות + מדריך שמע.'
+                    },
+                    {
+                        time: '14:30',
+                        title: 'צהריים ב-LOULOU',
+                        address: '107 Rue de Rivoli, 75001 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Loulou+Restaurant+107+Rue+de+Rivoli+75001+Paris',
+                        booked: true,
+                        badge: 'מוזמן',
+                        desc: 'ממש ביציאה מהמוזיאון ליד גני טווילרי.',
+                        alert: 'חובה לבטל מראש אם לא מגיעים — אחרת ייגבה תשלום.'
+                    },
+                    {
+                        time: '17:00',
+                        title: 'שוק הכריסמס בגני טווילרי',
+                        address: 'Jardin des Tuileries, 75001 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Jardin+des+Tuileries+Christmas+Market+Paris',
+                        booked: false,
+                        badge: 'אווירה',
+                        desc: 'שיטוט בין הדוכנים ואורות החג, ואז חזרה למארה להתארגנות.'
+                    },
+                    {
+                        time: '20:45',
+                        title: 'ארוחת ערב ב-JAJA',
+                        address: '3 Rue Sainte-Croix de la Bretonnerie, 75004 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Jaja+Restaurant+3+Rue+Sainte+Croix+de+la+Bretonnerie+75004+Paris',
+                        booked: true,
+                        badge: 'מוזמן',
+                        desc: 'ערב שישי בלב המארה.'
+                    }
+                ]
+            },
+            {
+                id: 'sat',
+                title: 'שבת, 28 בנובמבר | הגדה השמאלית, אמנות וערב חגיגי',
+                events: [
+                    {
+                        time: '10:00',
+                        title: 'בוקר של שופינג בגדה השמאלית',
+                        address: 'Le Bon Marché, 24 Rue de Sèvres, 75007 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Le+Bon+Marche+24+Rue+de+Sevres+75007+Paris',
+                        booked: false,
+                        badge: 'בוקר',
+                        desc: 'Le Bon Marché והאזור.'
+                    },
+                    {
+                        time: '15:00',
+                        title: 'צהריים ב-Osteria degli Amici',
+                        address: '14 Rue Mandar, 75002 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Osteria+degli+Amici+14+Rue+Mandar+75002+Paris',
+                        booked: true,
+                        badge: 'מוזמן',
+                        desc: 'ארוחה קלילה; לכוון ליציאה עד 16:05 לקראת המוזיאון.'
+                    },
+                    {
+                        time: '16:30',
+                        title: 'Bourse de Commerce — Pinault Collection',
+                        address: '2 Rue de Viarmes, 75001 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Bourse+de+Commerce+Pinault+Collection+2+Rue+de+Viarmes+75001+Paris',
+                        booked: true,
+                        badge: 'מוזמן • מוזיאון',
+                        code: '2932902',
+                        desc: 'ביקור במוזיאון האמנות העכשווית.'
+                    },
+                    {
+                        time: '21:00',
+                        title: 'ארוחת ערב חגיגית ב-L’Avenue',
+                        address: '41 Avenue Montaigne, 75008 Paris',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=L+Avenue+41+Avenue+Montaigne+75008+Paris',
+                        booked: true,
+                        badge: 'מוזמן',
+                        desc: 'חוגגות יום הולדת 40 לדנה בשדרות מונטן.'
+                    }
+                ]
+            },
+            {
+                id: 'sun',
+                title: 'ראשון, 29 בנובמבר | בוקר אחרון וחזרה הביתה',
+                events: [
+                    {
+                        time: '08:30',
+                        title: 'צ׳ק-אאוט ונסיעה לשדה התעופה CDG',
+                        address: 'Paris Charles de Gaulle Airport, Terminal 2',
+                        mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Paris+Charles+de+Gaulle+Airport+Terminal+2',
+                        booked: false,
+                        badge: 'חזרה',
+                        desc: 'המראה בטיסת אל על LY320 בשעה 11:00.'
+                    }
+                ]
+            }
+        ];
+
+        /* =========================================================
+           2. RENDER SCHEDULE & DAY FILTERS
+           ========================================================= */
+        let selectedDay = 'all';
+        let currentActiveTab = 'schedule';
+
+        function filterDay(dayId) {
+            selectedDay = dayId;
+            document.querySelectorAll('.day-pill').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.day === dayId);
+            });
+            renderSchedule();
+            updateFloatingScrollBtn();
+        }
+
+        function renderSchedule() {
+            const container = document.getElementById('itinerary-container');
+            const filtered = scheduleData.filter(d => selectedDay === 'all' || d.id === selectedDay);
+
+            container.innerHTML = filtered.map(day => `
+                <div class="day-section">
+                    <div class="day-heading">
+                        <h2 class="day-he-title">${day.title}</h2>
+                    </div>
+                    <div class="timeline">
+                        ${day.events.map(ev => {
+                            const mapsUrl = ev.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ev.address)}`;
+                            return `
+                                <div class="event-item ${ev.booked ? 'booked' : ''}">
+                                    <span class="timeline-dot"></span>
+                                    <div class="event-top">
+                                        <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                            <span class="event-time">${ev.time}</span>
+                                            <span class="badge ${ev.booked ? 'badge-blush' : 'badge-navy'}">${ev.badge}</span>
+                                        </div>
+                                        <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 5px 11px; font-size: 12px;">
+                                            📍 ניווט
+                                        </a>
+                                    </div>
+                                    <h3 class="event-name">${ev.title}</h3>
+                                    <div class="event-addr">${ev.address}</div>
+                                    <p class="event-desc">${ev.desc}</p>
+                                    ${ev.code ? `
+                                        <div class="booking-pill">
+                                            <span>מספר הזמנה: <strong class="font-luxury" style="font-size: 15px;">${ev.code}</strong></span>
+                                            <button class="btn btn-navy" style="padding: 3px 9px; font-size: 11px;" onclick="copyText('${ev.code}', 'מספר הזמנה ${ev.code} הועתק!')">📋 העתק</button>
+                                        </div>
+                                    ` : ''}
+                                    ${ev.alert ? `<div class="event-alert">⚠️ ${ev.alert}</div>` : ''}
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        /* =========================================================
+           3. TAB NAVIGATION & FLOATING SCROLL-TO-DAYS BUTTON
+           ========================================================= */
+        function switchTab(tabName) {
+            currentActiveTab = tabName;
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            const activePanel = document.getElementById(`panel-${tabName}`);
+            if (activePanel) activePanel.classList.add('active');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.tab === tabName);
+            });
+
+            updateFloatingScrollBtn();
+        }
+
+        function updateFloatingScrollBtn() {
+            const btn = document.getElementById('scroll-to-days-btn');
+            if (!btn) return;
+            if (currentActiveTab === 'schedule' && window.scrollY > 220) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        }
+
+        function scrollToDaysTabs() {
+            const dayBar = document.getElementById('day-filter-bar');
+            const stickyNav = document.querySelector('nav.tabs-nav');
+            if (dayBar) {
+                const navHeight = stickyNav ? stickyNav.offsetHeight : 0;
+                const targetY = dayBar.getBoundingClientRect().top + window.scrollY - navHeight - 12;
+                window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        window.addEventListener('scroll', updateFloatingScrollBtn, { passive: true });
+
+        /* =========================================================
+           4. COUNTDOWN TIMER (STRICTLY LTR: DAYS -> HOURS -> MIN -> SEC)
+           ========================================================= */
+        function initCountdown() {
+            const takeoffTime = new Date('2026-11-25T16:50:00+02:00').getTime();
+
+            function update() {
+                const now = Date.now();
+                const diff = takeoffTime - now;
+
+                if (diff <= 0) {
+                    document.getElementById('cd-caption').textContent = 'הגיע הזמן! חוגגות 40 לדנה בפריז 🥂';
+                    document.getElementById('cd-days').textContent = '0';
+                    document.getElementById('cd-hours').textContent = '00';
+                    document.getElementById('cd-minutes').textContent = '00';
+                    document.getElementById('cd-seconds').textContent = '00';
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('cd-days').textContent = days;
+                document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('cd-minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('cd-seconds').textContent = String(seconds).padStart(2, '0');
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        /* =========================================================
+           5. TAXI MODAL
+           ========================================================= */
+        function openTaxiModal() {
+            document.getElementById('taxi-modal').classList.add('open');
+        }
+        function closeTaxiModal() {
+            document.getElementById('taxi-modal').classList.remove('open');
+        }
+
+        /* =========================================================
+           6. LIVE PARIS WEATHER (WITH GRACEFUL FALLBACK)
+           ========================================================= */
+        async function fetchWeather() {
+            const codes = {
+                0: ['בהיר ושמשי', '☀️'],
+                1: ['בהיר לרוב', '🌤️'],
+                2: ['מעונן חלקית', '⛅'],
+                3: ['מעונן', '☁️'],
+                45: ['ערפל קל', '🌫️'],
+                51: ['טפטוף קל', '🌦️'],
+                61: ['גשם קל', '🌧️'],
+                63: ['גשם', '🌧️'],
+                80: ['ממטרים קלים', '🌦️']
+            };
+            const hebrewDays = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'];
+
+            try {
+                const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=48.8566&longitude=2.3522&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Europe%2FParis&forecast_days=3');
+                if (!response.ok) throw new Error('Network error');
+                const data = await response.json();
+
+                const temp = Math.round(data.current.temperature_2m);
+                const [desc, emoji] = codes[data.current.weather_code] || ['קריר ופריזאי', '⛅'];
+
+                document.getElementById('w-temp').textContent = `${temp}°`;
+                document.getElementById('w-desc').textContent = desc;
+                document.getElementById('w-emoji').textContent = emoji;
+
+                let forecastHtml = '';
+                for (let i = 0; i < 3; i++) {
+                    const dateObj = new Date(data.daily.time[i]);
+                    const label = i === 0 ? 'היום' : `יום ${hebrewDays[dateObj.getDay()]}`;
+                    const min = Math.round(data.daily.temperature_2m_min[i]);
+                    const max = Math.round(data.daily.temperature_2m_max[i]);
+                    const [, dEmoji] = codes[data.daily.weather_code[i]] || ['', '⛅'];
+                    forecastHtml += `
+                        <div class="forecast-cell">
+                            <strong>${label}</strong>
+                            <div style="font-size: 18px; margin: 3px 0;">${dEmoji}</div>
+                            <div dir="ltr" style="font-weight: 600; color: var(--navy);">${min}° / ${max}°</div>
+                        </div>
+                    `;
+                }
+                document.getElementById('w-forecast').innerHTML = forecastHtml;
+            } catch (err) {
+                // Keep static graceful fallback if offline
+            }
+        }
+
+        /* =========================================================
+           7. EURO (€) EXPENSE SPLITTER
+           ========================================================= */
+        let sisters = JSON.parse(localStorage.getItem('parisis_dana_sisters')) || ['דנה', 'אחות 2', 'אחות 3'];
+        let expenses = JSON.parse(localStorage.getItem('parisis_dana_expenses')) || [];
+
+        function initExpenses() {
+            sisters.forEach((name, idx) => {
+                document.getElementById(`sister-${idx}`).value = name;
+            });
+            refreshPayerOptions();
+            renderExpenses();
+        }
+
+        function updateSisterName(idx, value) {
+            sisters[idx] = value.trim() || (idx === 0 ? 'דנה' : `אחות ${idx + 1}`);
+            localStorage.setItem('parisis_dana_sisters', JSON.stringify(sisters));
+            refreshPayerOptions();
+            renderExpenses();
+            showToast('השם נשמר');
+        }
+
+        function refreshPayerOptions() {
+            document.getElementById('exp-payer').innerHTML = sisters
+                .map((name, idx) => `<option value="${idx}">${name} שילמה</option>`)
+                .join('');
+        }
+
+        function addExpense(event) {
+            event.preventDefault();
+            const desc = document.getElementById('exp-desc').value.trim();
+            const amount = parseFloat(document.getElementById('exp-amount').value);
+            const payer = parseInt(document.getElementById('exp-payer').value, 10);
+
+            if (!desc || isNaN(amount) || amount <= 0) return;
+
+            expenses.unshift({ id: Date.now(), desc, amount, payer });
+            localStorage.setItem('parisis_dana_expenses', JSON.stringify(expenses));
+
+            document.getElementById('exp-desc').value = '';
+            document.getElementById('exp-amount').value = '';
+            renderExpenses();
+            showToast('ההוצאה נוספה!');
+        }
+
+        function deleteExpense(id) {
+            expenses = expenses.filter(item => item.id !== id);
+            localStorage.setItem('parisis_dana_expenses', JSON.stringify(expenses));
+            renderExpenses();
+            showToast('ההוצאה נמחקה');
+        }
+
+        function calculateSettlement() {
+            const total = expenses.reduce((sum, item) => sum + item.amount, 0);
+            const share = total / 3;
+            const paidBy = [0, 0, 0];
+
+            expenses.forEach(item => {
+                if (paidBy[item.payer] !== undefined) {
+                    paidBy[item.payer] += item.amount;
+                }
+            });
+
+            const debtors = [];
+            const creditors = [];
+
+            sisters.forEach((name, idx) => {
+                const diff = paidBy[idx] - share;
+                if (diff < -0.01) debtors.push({ name, amount: Math.abs(diff) });
+                else if (diff > 0.01) creditors.push({ name, amount: diff });
+            });
+
+            const transfers = [];
+            let i = 0, j = 0;
+            while (i < debtors.length && j < creditors.length) {
+                const transferAmount = Math.min(debtors[i].amount, creditors[j].amount);
+                if (transferAmount > 0.01) {
+                    transfers.push({
+                        from: debtors[i].name,
+                        to: creditors[j].name,
+                        amount: transferAmount
+                    });
+                }
+                debtors[i].amount -= transferAmount;
+                creditors[j].amount -= transferAmount;
+                if (debtors[i].amount < 0.01) i++;
+                if (creditors[j].amount < 0.01) j++;
+            }
+
+            return { total, share, transfers };
+        }
+
+        function renderExpenses() {
+            const { total, share, transfers } = calculateSettlement();
+            document.getElementById('exp-total').textContent = `€${total.toFixed(2)}`;
+            document.getElementById('exp-share').textContent = `€${share.toFixed(2)}`;
+
+            const settlementEl = document.getElementById('settlement-list');
+            if (expenses.length === 0) {
+                settlementEl.innerHTML = `<div class="transfer-pill" style="opacity: 0.75;">טרם הוזנו הוצאות</div>`;
+            } else if (transfers.length === 0) {
+                settlementEl.innerHTML = `<div class="transfer-pill" style="color: var(--blush-bg); font-weight: 600;">הכל מאוזן! אף אחת לא חייבת כלום 🥂</div>`;
+            } else {
+                settlementEl.innerHTML = transfers.map(t => `
+                    <div class="transfer-pill">
+                        <span><strong>${t.from}</strong> מעבירה ל-<strong>${t.to}</strong></span>
+                        <strong class="font-luxury" style="font-size: 16px; color: var(--blush);" dir="ltr">€${t.amount.toFixed(2)}</strong>
+                    </div>
+                `).join('');
+            }
+
+            const listEl = document.getElementById('expenses-list');
+            if (expenses.length === 0) {
+                listEl.innerHTML = `<div style="font-size: 13px; color: var(--text-muted); text-align: center; padding: 14px;">אין הוצאות רשומות עדיין</div>`;
+            } else {
+                listEl.innerHTML = expenses.map(item => `
+                    <div class="expense-item-row">
+                        <div>
+                            <div style="font-size: 14px; font-weight: 600; color: var(--navy);">${item.desc}</div>
+                            <div style="font-size: 12px; color: var(--text-muted);">שולם ע״י ${sisters[item.payer]}</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <strong class="font-luxury" style="font-size: 17px; color: var(--navy);" dir="ltr">€${item.amount.toFixed(2)}</strong>
+                            <button class="delete-exp-btn" onclick="deleteExpense(${item.id})" title="מחיקה">✕</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function copyExpenseSummary() {
+            const { total, share, transfers } = calculateSettlement();
+            let summary = `PARISis • Dana's 40th Birthday 🥂\nסיכום הוצאות משותפות: €${total.toFixed(2)} (€${share.toFixed(2)} לכל אחת)\n`;
+            if (transfers.length === 0) {
+                summary += `הכל מאוזן!`;
+            } else {
+                transfers.forEach(t => {
+                    summary += `• ${t.from} מעבירה ל-${t.to}: €${t.amount.toFixed(2)}\n`;
+                });
+            }
+            copyText(summary, 'סיכום ההוצאות הועתק!');
+        }
+
+        /* =========================================================
+           8. SHARED LINKS STORAGE (PHOTOS & GOOGLE MAPS)
+           ========================================================= */
+        let savedLinks = {
+            album: localStorage.getItem('parisis_dana_album') || '',
+            map: localStorage.getItem('parisis_dana_map') || ''
+        };
+
+        function saveMediaLink(key) {
+            const input = document.getElementById(`input-${key}`);
+            let url = input.value.trim();
+            if (!url) return showToast('אנא הדביקו קישור קודם');
+            if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+
+            savedLinks[key] = url;
+            localStorage.setItem(`parisis_dana_${key}`, url);
+            renderMediaBoxes();
+            showToast('הקישור נשמר!');
+        }
+
+        function resetMediaLink(key) {
+            savedLinks[key] = '';
+            localStorage.removeItem(`parisis_dana_${key}`);
+            renderMediaBoxes();
+        }
+
+        function renderMediaBoxes() {
+            const albumBox = document.getElementById('album-storage-box');
+            if (savedLinks.album) {
+                albumBox.innerHTML = `
+                    <div class="btn-group">
+                        <a href="${savedLinks.album}" target="_blank" rel="noopener noreferrer" class="btn btn-navy">🖼️ פתיחת האלבום המשותף</a>
+                        <button class="btn btn-outline" onclick="resetMediaLink('album')">עריכה</button>
+                    </div>
+                `;
+            } else {
+                albumBox.innerHTML = `
+                    <div style="display: flex; gap: 8px;">
+                        <input id="input-album" class="input-ctrl" type="url" dir="ltr" placeholder="https://photos.app.goo.gl/...">
+                        <button class="btn btn-navy" onclick="saveMediaLink('album')">שמור</button>
+                    </div>
+                `;
+            }
+
+            const mapBox = document.getElementById('map-storage-box');
+            if (savedLinks.map) {
+                mapBox.innerHTML = `
+                    <div class="btn-group">
+                        <a href="${savedLinks.map}" target="_blank" rel="noopener noreferrer" class="btn btn-navy">📍 פתיחת המפה שלנו</a>
+                        <button class="btn btn-outline" onclick="resetMediaLink('map')">עריכה</button>
+                    </div>
+                `;
+            } else {
+                mapBox.innerHTML = `
+                    <div style="display: flex; gap: 8px;">
+                        <input id="input-map" class="input-ctrl" type="url" dir="ltr" placeholder="https://maps.app.goo.gl/...">
+                        <button class="btn btn-navy" onclick="saveMediaLink('map')">שמור</button>
+                    </div>
+                `;
+            }
+        }
+
+        /* =========================================================
+           9. CLIPBOARD & TOAST HELPERS
+           ========================================================= */
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+
+        function copyText(text, toastMessage) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast(toastMessage || 'הועתק!');
+            } catch (e) {
+                showToast('לא ניתן להעתיק');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        /* =========================================================
+           INITIALIZE APP
+           ========================================================= */
+        initCountdown();
+        renderSchedule();
+        fetchWeather();
+        initExpenses();
+        renderMediaBoxes();
+    </script>
+</body>
+</html>
